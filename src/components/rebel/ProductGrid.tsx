@@ -52,7 +52,7 @@ export function ProductGrid() {
               key={p.id}
               className="group relative bg-card border border-border hover:border-ember/60 transition-all duration-300"
             >
-              <div className="aspect-square overflow-hidden bg-charcoal">
+              <div className="relative aspect-square overflow-hidden bg-charcoal">
                 <img
                   src={p.image}
                   alt={p.name}
@@ -61,6 +61,9 @@ export function ProductGrid() {
                   height={1024}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
+                <div className="absolute top-3 left-3 bg-ember/90 text-primary-foreground text-[10px] uppercase tracking-[0.2em] font-bold px-2 py-1">
+                  Pre-order
+                </div>
               </div>
 
               <div className="p-6 flex items-start justify-between gap-4">

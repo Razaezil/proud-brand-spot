@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/rebel-logo.png";
 
 const links = [
   { href: "#drop", label: "Shop" },
@@ -27,7 +28,8 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-4">
-        <a href="#top" className="font-display text-2xl tracking-tight">
+        <a href="#top" className="flex items-center gap-2 font-display text-2xl tracking-tight">
+          <img src={logo} alt="" width={36} height={36} className="h-8 w-auto object-contain" />
           REBEL<span className="text-ember">.</span>
         </a>
 

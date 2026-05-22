@@ -5,16 +5,16 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-20"
     >
       {/* ember glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-ember/20 blur-[120px]" />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-ember/20 blur-[140px]" />
         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-ember/15 via-ember/5 to-transparent" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full grid lg:grid-cols-12 gap-10 items-center">
-        <div className="lg:col-span-7 text-center lg:text-left">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 w-full grid lg:grid-cols-12 gap-10 lg:gap-6 items-center">
+        <div className="lg:col-span-6 text-center lg:text-left order-2 lg:order-1">
           <div className="inline-flex items-center gap-2 border border-ember/40 px-3 py-1 mb-6">
             <span className="w-1.5 h-1.5 bg-ember rounded-full animate-flicker" />
             <span className="text-xs uppercase tracking-[0.3em] text-ember">
@@ -22,7 +22,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.85] uppercase">
+          <h1 className="font-display text-[clamp(2.75rem,8vw,7rem)] leading-[0.85] uppercase">
             Defy <br />
             the <span className="text-ember">status</span> <br />
             quo<span className="text-ember">.</span>
@@ -70,13 +70,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="lg:col-span-5 relative">
+        <div className="lg:col-span-6 relative order-1 lg:order-2">
+          <div className="absolute inset-0 bg-ember/30 blur-3xl rounded-full scale-75" />
           <img
             src={logo}
             alt="REBEL logo in concrete and barbed wire with ember flames"
             width={1536}
             height={1024}
-            className="w-full h-auto drop-shadow-[0_20px_60px_rgba(232,93,58,0.4)]"
+            className="relative w-full h-auto drop-shadow-[0_30px_80px_rgba(232,93,58,0.45)]"
           />
         </div>
       </div>
