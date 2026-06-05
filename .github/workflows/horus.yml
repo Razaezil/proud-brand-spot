@@ -41,8 +41,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Kerangka kerja TanStack secara standar menyimpan hasil kompilasi statis di folder .output/public
-          path: './.output/public'
+          # Ubah kembali ke folder dist karena preset sudah diganti menjadi static murni
+          path: './dist' 
 
       - name: Deploy to GitHub Pages
         id: deployment
