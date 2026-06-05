@@ -1,20 +1,22 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Menonaktifkan total sistem server bawaan TanStack Start
   tanstackStart: {
-    // Kita matikan pencarian server entry murni agar Nitro beralih ke mode SPA/Statis penuh
-    server: { entry: undefined }, 
+    server: { entry: undefined },
   },
   vite: {
-    // Menetapkan base url agar aset gambar dan JS terbaca di GitHub Pages
     base: '/proud-brand-spot/',
+    build: {
+      // Memaksa Vite menghasilkan output SPA standar (Single Page Application)
+      ssr: false
+    }
   },
+  // Memaksa Nitro untuk bertindak sebagai generator file statis biasa
   nitro: {
-    preset: "github_pages",
-    // Menentukan file html utama secara manual sebagai gerbang masuk aplikasi statis
-    entry: "index.html", 
+    preset: "static",
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
       routes: ['/']
     }
   }
