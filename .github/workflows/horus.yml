@@ -33,11 +33,15 @@ jobs:
         run: bun install
 
       - name: Build website
+        # Menyuntikkan instruksi static build agar konfigurasi Lovable beralih fungsi
         run: bun run build
+        env:
+          DEPLOY_TARGET: static
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Kerangka kerja TanStack secara standar menyimpan hasil kompilasi statis di folder .output/public
           path: './.output/public'
 
       - name: Deploy to GitHub Pages
