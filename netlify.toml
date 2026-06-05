@@ -1,0 +1,6 @@
+[build]
+  command = "bun run build:netlify"
+  publish = "dist/client"
+
+[build.environment]
+  DEPLOY_TARGET = "netlify"
